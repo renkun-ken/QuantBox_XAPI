@@ -6,7 +6,7 @@ CRemoteQueue::CRemoteQueue(char* address) :CMsgQueue()
 {
 	m_pubisher = nullptr;
 
-	strncpy(m_Address, address, sizeof(m_Address));
+	strncpy_s(m_Address, address, sizeof(m_Address));
 #ifdef _REMOTE
 	m_ctx = nullptr;
 #endif
